@@ -24,8 +24,16 @@
   padding: 0;
 }
 
+.Weather li {
+  font-size: 16px;
+  font-weight: 100;
+  list-style: none;
+}
+
 .Weather img {
   margin-right: 10px;
+  display: inline-block;
+  margin-top: -25px;
 }
 
 .Weather .temperature {
@@ -35,12 +43,6 @@
   line-height: 64px;
 }
 
-.Weather li {
-  font-size: 16px;
-  font-weight: 100;
-  list-style: none;
-}
-
 .Weather .unit {
   color: rgb(33, 33, 33);
   font-size: 16px;
@@ -48,5 +50,4 @@
   position: relative;
   line-height: 1;
   top: -34px;
-  margin-left: 5px;
 }

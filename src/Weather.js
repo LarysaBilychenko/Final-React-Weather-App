@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({});
@@ -17,7 +18,6 @@ export default function Weather(props) {
       icon_url: response.data.condition.icon_url,
       date: new Date(response.data.time * 1000),
     });
-    console.log(response.data);
     setReady(true);
   }
 
@@ -63,6 +63,7 @@ https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=met
           </form>
         </div>
         <WeatherInfo data={weatherData} />
+        <WeatherForecast data={weatherData} />
       </div>
     );
   } else {
